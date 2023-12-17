@@ -1,12 +1,26 @@
 {
-    "builds": [{
+    "version": 2,
+    "builds": 
+    [{
         "src": "christmas/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+    },
+    {
+        "src": "build_files.sh",
+        "use": "@vercel/static_build",
+        "config":{
+            "distDir": "static_build"
+        }
+    }
+    ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/static/(.*)",
+            "dest":"/static/$1"
+        },
+        {
+            "src":"/(.*)",
             "dest": "christmas/wsgi.py"
         }
     ]
