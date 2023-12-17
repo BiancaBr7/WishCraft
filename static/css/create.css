@@ -1,0 +1,122 @@
+/* styles.css */
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    margin-top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: bisque;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top:100%;
+    left:0;
+    width:0;
+    height:2px;
+    background:bisque;
+    transition: .5s;
+}
+
+.navbar a:hover::before{
+    width:100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/s2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
+    color: bisque;
+    line-height: 140%;
+    letter-spacing: 1px;
+}
+form {
+    color: bisque;
+    max-width: 860px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Center the form and add margin top/bottom */
+    padding: 20px; /* Add padding to the form */
+    text-align: left;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: bisque;
+    display: block;
+    margin-bottom: 10px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    width: 100%; /* Set a fixed width for the input fields (2/3 of the page) */
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    font-size: 18px;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+}
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    max-width : 100%;
+    min-width :100%;
+    font-size: 18px;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+}
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+/* styles.css */
+
+.incorrect {
+    background-color: #ffcccc; /* Background color for the incorrect div */
+    padding: 10px; /* Adjust the padding as needed */
+    border: 1px solid #ff9999; /* Border color for the incorrect div */
+    color: #cc0000; /* Text color for the incorrect div */
+    margin-bottom: 16px; /* Adjust the margin as needed */
+}
