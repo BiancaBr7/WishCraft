@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:bisque;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+body {
+    min-height: 100vh;
+  }
+
+.header{
+    position:absolute;
+    margin-top:20px;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top:100%;
+    left:0;
+    width:0;
+    height:2px;
+    background:bisque ;
+    transition: .5s;
+}
+
+.navbar a:hover::before{
+    width:100%;
+}
+
+.top{
+    position: absolute;
+    width: 100%; /* Set the width of your container */
+    height: 100vh;
+    background-image: url('../images/s2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.welcome{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translate(0, 60%);
+    line-height: 200%;
+}
+
+.welcome h1{
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+.welcome h2{
+    font-family: 'brush script mt', cursive;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+
+
+.create,
+.search {
+    text-align: center;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 50px;
+    margin-top: 125px;
+}
+
+.create h3{
+    color:bisque;
+    margin-bottom:40px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+form input {
+    padding: 8px;
+    margin-bottom: 26px;
+    width: 80%;
+    box-sizing: border-box;
+    color:black;
+    background-color: antiquewhite;
+}
+
+/* Style form submit button */
+form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
