@@ -1,2 +1,32 @@
-<h2>Wish Not Found</h2>
-<p>The requested Christmas wish could not be found.</p> 
+{% load static %}
+
+<head>
+
+    <meta charset = "utf-8">
+
+    <link href = "{% static 'css/not_found.css' %}" rel = 'stylesheet'>
+
+    <meta name = "author" content = "Bianca Bai">
+
+    <meta name = "description" content = "This Page displays your message.">
+
+    <title>Wish Not Found</title>
+    <link rel="icon" href="{%static '/images/icon.png'%}" type = "images">
+    
+</head>
+
+<header class = "header">
+    <a href = "{% url 'home' %}" class = "logo">
+        <img src="{%static '/images/icon.png'%}" alt="Icon Image of Our Site!" width="72" height="48">
+    </a>
+    <nav class = "navbar">
+        <a href = "{% url 'home' %}">Home</a>
+        <a href = "{% url 'create_wish' %}">Create</a>
+    </nav>
+</header>
+
+<body>
+    <h1>Wish Not Found</h1>
+    <h3>Emmmmm🤨, looks like Santa's elves are still working on it!</h3>
+    <img src="{%static '/images/elves.png'%}" class = 'center'>
+</body>
