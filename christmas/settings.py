@@ -46,10 +46,14 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 ROOT_URLCONF = 'christmas.urls'
 
@@ -84,12 +88,12 @@ WSGI_APPLICATION = 'christmas.wsgi.application'
 
 DATABASES = {
     'default':{
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': '*f6-61DA-C2fAbg1D-DCGBdFeFe-FfDB',
-        'HOST':'roundhouse.proxy.rlwy.net',
-        'PORT': '30716',
+        'PASSWORD': '&79UEL.GAaJ-rUr',
+        'HOST':'db.rnauvybabjwrhuwaiwxc.supabase.co',
+        'PORT': '5432',
     }
 }
 

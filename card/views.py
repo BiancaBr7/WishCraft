@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Wish
 from .forms import WishForm
 from .forms import WishSearchForm
+from django.contrib import messages
 
 def home(request):
     if request.method == 'POST':
@@ -22,6 +23,7 @@ def create_wish(request):
         form = WishForm(request.POST)
         if form.is_valid():
             wish = form.save()
+            messages.success(request, f"Your wish was created successfully! Your Wish ID is {wish.id}.")
             return redirect('view_wish', pk=wish.id)
     else:
         form = WishForm()
@@ -35,11 +37,11 @@ def view_wish(request, pk):
         if request.method == 'POST':
             entered_password = request.POST.get('password')
             if entered_password == wish.password or entered_password == '':
-                return render(request, 'card/view_wish.html', {'wish': wish, 'correct_password': True})
+                return render(request, 'card/view_wish.html', {'wish': wish, 'correct_password': True, 'wish_id': wish.id})
             else:
-                return render(request, 'card/view_wish.html', {'wish': wish, 'wrong_password': True})
+                return render(request, 'card/view_wish.html', {'wish': wish, 'wrong_password': True, 'wish_id': wish.id})
 
-        return render(request, 'card/view_wish.html', {'wish': wish})
+        return render(request, 'card/view_wish.html', {'wish': wish, 'wish_id': wish.id})
 
-    except:
+    except Wish.DoesNotExist:
         return render(request, 'card/wish_not_found.html')
