@@ -43,5 +43,5 @@ def view_wish(request, pk):
 
         return render(request, 'card/view_wish.html', {'wish': wish, 'wish_id': wish.id})
 
-    except Wish.DoesNotExist:
+    except:
         return render(request, 'card/wish_not_found.html')
