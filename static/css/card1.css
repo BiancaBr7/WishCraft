@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/s2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    cursor: url('../images/cursor.png') 16 16, auto;
+}
+
+.header{
+    box-sizing: border-box;
+    margin-top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: bisque;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top:100%;
+    left:0;
+    width:0;
+    height:2px;
+    background:bisque;
+    transition: .5s;
+}
+
+.navbar a:hover::before{
+    width:100%;
+}
+.wish{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%; /* Set the width of your container */
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 80px;
+    color: bisque;
+    line-height: 140%;
+    letter-spacing: 1px;
+    background-image: url('../images/light.png');
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+}
+
+.signature{
+    text-align: right;
+}
