@@ -22,6 +22,16 @@
         
     </head>
 
+    <header class = "header">
+        <a href = "{% url 'home' %}" class = "logo">
+            <img src="{%static '/images/icon.png'%}" alt="Icon Image of Our Site!" width="72" height="48">
+        </a>
+        <nav class = "navbar">
+            <a href = "{% url 'home' %}">Home</a>
+            <a href = "{% url 'create_wish' %}">Create</a>
+        </nav>
+    </header>
+
     <body>
         <div class = 'wish'>
             <div class = 'title'>
