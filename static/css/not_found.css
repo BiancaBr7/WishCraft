@@ -1,8 +1,5 @@
-*{
-    box-sizing: border-box;
-}
-
 .header{
+    box-sizing: border-box;
     margin-top: 20px;
     left: 0;
     width: 100%;
