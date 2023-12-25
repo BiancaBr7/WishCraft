@@ -27,6 +27,7 @@
         <meta name = "author" content = "Bianca Bai">
 
         <meta name = "description" content = "This Page displays your message.">
+        <script defer src="{%static '/script/144145242236.js'%}"></script>
 
         <title>{{ wish.title }}</title>
         <link rel="icon" href="{%static '/images/icon.png'%}" type = "images">
@@ -44,7 +45,11 @@
     </header>
 
     <body>
+        <div class="snowflakes">
+            <div class = "snowflake"></div>
+        </div>
         <div class = 'wish'>
+            <button id="stopSnowButton" onclick="toggleSnow()">Stop Snow</button>
             <div class = 'title'>
                 <h1>
                     {{ wish.title }}
